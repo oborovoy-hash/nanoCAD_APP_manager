@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ApplicationPackage
+  xmlns="hostApplicationPackage/v01"
+  Name="nanoCAD SDK Samples"
+>
+  <Components>
+    <ConfigEntry
+      FileName="NCADSDK.cfg"
+      FileType="CFG"
+    />
+    <ComponentEntry
+      AppName="HelloNRX minimal NRX sample"
+      ModuleName="HelloNRX.nrx"
+      ModuleType="NRX"
+    />
+    <ComponentEntry
+      AppName="HelloMultiview NRX Sample"
+      ModuleName="HelloMultiview.nrx"
+      ModuleType="NRX"
+    />
+    <ComponentEntry
+      AppName="CrossCircle Object Enabler"
+      ModuleName="CrossCircle.nrx"
+      ModuleType="NRX"
+    />
+    <ComponentEntry
+      AppName="CrossCircle Commands"
+      ModuleName="CrossCircleUI.nrx"
+      ModuleType="NRX"
+    />
+    <ComponentEntry
+      AppName="CrossCircle Managed Wrapper"
+      ModuleName="CrossCircleMg.dll"
+      ModuleType="NRX"
+    />
+    <ComponentEntry
+      AppName="CrossCircle Managed Commands"
+      ModuleName="CrossCircleMgdList.dll"
+      ModuleType="MGD"
+    />
+    <ComponentEntry
+      AppName="PointCloud sample"
+      ModuleName="PointCloud.nrx"
+      ModuleType="NRX"
+    />
+    <ComponentEntry
+      AppName="HelloHost .NET Sample"
+      ModuleName="HelloHost.dll"
+      ModuleType="MGD"
+    />
+    <ComponentEntry
+      AppName="HelloHost VB.NET Sample"
+      ModuleName="HelloHostVB.dll"
+      ModuleType="MGD"
+    />
+    <ComponentEntry
+      AppName="HelloMultiCAD .NET Sample"
+      ModuleName="HelloMultiCAD.dll"
+      ModuleType="MGD"
+    />
+    <ComponentEntry
+      AppName="NSF Commands"
+      ModuleName="hello_nsf.nsf"
+      ModuleType="NSF"
+    />
+    <ComponentEntry
+      AppName="Tiles LISP Sample"
+      ModuleName="Tiles.lsp"
+      ModuleType="LISP"
+    />
+    <ComponentEntry
+      AppName="Hello World DCL Sample"
+      ModuleName="helloworld.lsp"
+      ModuleType="LISP"
+    />
+    <ComponentEntry
+      AppName="ListDialog DCL Sample"
+      ModuleName="listdialog.lsp"
+      ModuleType="LISP"
+    />
+    <ComponentEntry
+      AppName="MessageBox DCL Sample"
+      ModuleName="messagebox.lsp"
+      ModuleType="LISP"
+    />
+    <ComponentEntry
+      AppName="SinDialog DCL Sample"
+      ModuleName="sindialog.lsp"
+      ModuleType="LISP"
+    />
+  </Components>
+</ApplicationPackage>
