@@ -1,27 +1,39 @@
 ```
-# Build artifacts
-obj/
-bin/
-*.nupkg
-*.nuspec
-*.nupkg.sha512
-*.nupkg.metadata
-*.deps.json
-*.runtimeconfig.dev.json
-*.runtimeconfig.json
-
+# Compiled and build artifacts
+*.pyc
+__pycache__/
+*.o
+*.obj
+*.dll
+*.so
+*.a
+*.exe
+*.out
+*.class
 # Dependencies
-packages/
-
-# Logs
-*.log
-
-# Environment
+node_modules/
+venv/
+.venv/
 .env
 .env.local
-.env.*
-
-# OS generated files
+*.env.*
+# Build directories
+dist/
+build/
+target/
+# NuGet packages and build artifacts
+packages/
+*.nupkg
+src/obj/
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+# Editors
+.vscode/
+.idea/
+# System files
 .DS_Store
 Thumbs.db
 ```
+packages-microsoft-prod.deb
