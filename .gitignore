@@ -1,39 +1,5 @@
 ```
-# Compiled and build artifacts
-*.pyc
-__pycache__/
-*.o
-*.obj
-*.dll
-*.so
-*.a
-*.exe
-*.out
-*.class
-# Dependencies
-node_modules/
-venv/
-.venv/
-.env
-.env.local
-*.env.*
-# Build directories
-dist/
-build/
-target/
-# NuGet packages and build artifacts
-packages/
-*.nupkg
-src/obj/
-# Logs and temp files
-*.log
-*.tmp
-*.swp
-# Editors
-.vscode/
-.idea/
-# System files
-.DS_Store
-Thumbs.db
+# Build artifacts
+obj/
+*.assets.json
 ```
-packages-microsoft-prod.deb
