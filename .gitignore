@@ -1,75 +1,38 @@
-```
-# Build artifacts
-obj/
+```csharp
+# Build results
 bin/
-*.nupkg
-*.nuspec
-*.snupkg
-*.vspscc
-*.vssscc
+obj/
+out/
+
+# User-specific files
+.vs/
 *.user
 *.userosscache
 *.suo
-*.csproj.user
-*.vbproj.user
-*.fsproj.user
+*.userprefs
 
-# Dependencies
-packages/
-node_modules/
-vendor/
+# Build results of Visual Studio projects
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
 
-# OS generated files
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-desktop.ini
-
-# Environment specific settings
-.env
-.env.local
-.env.*
-!env.example
-
-# IDE specific files
-.vs/
+# Visual Studio Code
 .vscode/
-.idea/
-*.swp
-*.swo
 
-# Logs
-*.log
+# Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+*.userprefs
 
-# Test and coverage
-coverage/
-*.coverage
-htmlcov/
-.coverage.*
-
-# Compiled files
-*.exe
-*.dll
-*.so
-*.dylib
-*.class
-*.o
-*.obj
-*.out
-
-# Compressed archives
-*.zip
-*.tar.gz
-*.tar.bz2
-*.tar.xz
-*.7z
-*.rar
-*.gz
-*.bz2
-*.xz
-*.zst
+# Others
+*.VC.db
+*.VC.VC.opendb
 ```
