@@ -28,13 +28,32 @@ namespace NanoCADModuleManager
 
         private void LoadSettings()
         {
+            // Check if settings.ini exists, if not create a default one
+            if (!File.Exists(_settingsFilePath))
+            {
+                CreateDefaultSettingsFile();
+            }
+            
             _settingsParser = new IniFileParser(_settingsFilePath);
-            _repositoryPath = _settingsParser.GetValue("General", "repository_path"); // Assuming settings.ini has a General section with repository_path
+            _repositoryPath = _settingsParser.GetValue("General", "repository_path");
             
             // Fallback to default path if not specified
             if (string.IsNullOrEmpty(_repositoryPath))
             {
-                _repositoryPath = @"\\server\shared\nanoCAD\Modules"; // Default path
+                _repositoryPath = @".\WorkDir\nanoCAD_Packages"; // Default path relative to executable
+            }
+        }
+
+        private void CreateDefaultSettingsFile()
+        {
+            try
+            {
+                string defaultContent = "[General]\nrepository_path=./WorkDir/nanoCAD_Packages\n\n[Paths]\ndefault_module_path=./WorkDir/nanoCAD_Packages\n";
+                File.WriteAllText(_settingsFilePath, defaultContent);
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException($"Failed to create default settings.ini file: {ex.Message}", ex);
             }
         }
 

@@ -11,18 +11,17 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace NanoCADModuleManager;
-
-/// <summary>
-/// Interaction logic for MainWindow.xaml
-/// </summary>
-public partial class MainWindow : Window
+namespace NanoCADModuleManager
 {
-    private ModuleRepository _moduleRepository;
-    private ModuleManager _moduleManager;
-    private string _selectedVersion;
-    private string _selectedConfig;
-    
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class MainWindow : Window
+    {
+        private ModuleRepository _moduleRepository;
+        private ModuleManager _moduleManager;
+        private string _selectedVersion;
+        private string _selectedConfig;
     public MainWindow()
     {
         InitializeComponent();
@@ -113,6 +112,7 @@ public partial class MainWindow : Window
                     _moduleManager.RemoveModule(_selectedConfig, module.PackagePath);
                 }
             }
+        }
         }
     }
 }
