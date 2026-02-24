@@ -1,39 +1,7 @@
 ```
+# Package files
+*.deb
+
 # Build artifacts
 src/obj/
-*.nupkg
-*.snupkg
-*.nuget.dgspec.json
-*.nuget.g.props
-project.assets.json
-
-# Dependencies
-packages/
-node_modules/
-vendor/
-
-# Logs and temp files
-*.log
-*.tmp
-*.temp
-
-# Environment
-.env
-.env.local
-*.env.*
-
-# Editors
-.vscode/
-.idea/
-*.userprefs
-*.suo
-*.user
-*.userosscache
-*.sln.docstates
-
-# OS generated files
-.DS_Store
-Thumbs.db
-ehthumbs.db
-Icon?
 ```
