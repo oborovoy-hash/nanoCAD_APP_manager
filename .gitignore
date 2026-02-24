@@ -1,38 +1,27 @@
-```csharp
-# Build results
-bin/
+```
+# Build artifacts
 obj/
-out/
+bin/
+*.nupkg
+*.nuspec
+*.nupkg.sha512
+*.nupkg.metadata
+*.deps.json
+*.runtimeconfig.dev.json
+*.runtimeconfig.json
 
-# User-specific files
-.vs/
-*.user
-*.userosscache
-*.suo
-*.userprefs
+# Dependencies
+packages/
 
-# Build results of Visual Studio projects
-[Dd]ebug/
-[Dd]ebugPublic/
-[Rr]elease/
-[Rr]eleases/
-x64/
-x86/
-build/
-bld/
-[Bb]in/
-[Oo]bj/
+# Logs
+*.log
 
-# Visual Studio Code
-.vscode/
+# Environment
+.env
+.env.local
+.env.*
 
-# Resharper
-_ReSharper*/
-*.[Rr]e[Ss]harper
-*.DotSettings.user
-*.userprefs
-
-# Others
-*.VC.db
-*.VC.VC.opendb
+# OS generated files
+.DS_Store
+Thumbs.db
 ```
