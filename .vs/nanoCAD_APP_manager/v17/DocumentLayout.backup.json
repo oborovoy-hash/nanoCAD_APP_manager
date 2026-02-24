@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\!Programs\\nanoCAD_APP_manager\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FA320440-01EB-4EDD-9AAB-B5DF9DD6614F}|src\\NanoCADModuleManager.csproj|d:\\!programs\\nanocad_app_manager\\src\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{FA320440-01EB-4EDD-9AAB-B5DF9DD6614F}|src\\NanoCADModuleManager.csproj|solutionrelative:src\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\u042F\\AppData\\Local\\Temp\\.vsdbgsrc\\45295768691f8390fbec6c7c6e738e6ef19358a6d26c1990f835aac52db50d35\\XamlReader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -54,6 +58,18 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\!Programs\\nanoCAD_APP_manager\\src\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "src\\MainWindow.xaml",
+              "ToolTip": "D:\\!Programs\\nanoCAD_APP_manager\\src\\MainWindow.xaml",
+              "RelativeToolTip": "src\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-02-24T19:54:35.68Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "XamlReader.cs",
               "DocumentMoniker": "C:\\Users\\\u042F\\AppData\\Local\\Temp\\.vsdbgsrc\\45295768691f8390fbec6c7c6e738e6ef19358a6d26c1990f835aac52db50d35\\XamlReader.cs",
               "ToolTip": "C:\\Users\\\u042F\\AppData\\Local\\Temp\\.vsdbgsrc\\45295768691f8390fbec6c7c6e738e6ef19358a6d26c1990f835aac52db50d35\\XamlReader.cs [Read Only]",
@@ -64,7 +80,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ModuleManager.cs",
               "DocumentMoniker": "D:\\!Programs\\nanoCAD_APP_manager\\src\\ModuleManager.cs",
               "RelativeDocumentMoniker": "src\\ModuleManager.cs",
@@ -72,12 +88,11 @@
               "RelativeToolTip": "src\\ModuleManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-24T16:28:24.796Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-24T16:28:24.796Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "NCadConfig.cs",
               "DocumentMoniker": "D:\\!Programs\\nanoCAD_APP_manager\\src\\NCadConfig.cs",
               "RelativeDocumentMoniker": "src\\NCadConfig.cs",
@@ -85,8 +100,7 @@
               "RelativeToolTip": "src\\NCadConfig.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-24T15:56:16.618Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-24T15:56:16.618Z"
             }
           ]
         }
