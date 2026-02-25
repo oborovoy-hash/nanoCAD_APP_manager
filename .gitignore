@@ -1,0 +1,11 @@
+```
+# Build artifacts
+*.ini
+!src/settings.ini
+
+# Debug and build directories
+**/Debug/
+**/Release/
+obj/
+bin/
+```
