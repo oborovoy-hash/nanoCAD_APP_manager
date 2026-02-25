@@ -187,6 +187,62 @@ namespace KpblcNCadCfgIni
 
         public List<NCadConfiguration> ConfigurationList { get; private set; }
 
+        public bool IsModuleLoaded(string moduleName)
+        {
+            // Iterate through configurations and their startup applications to find if the module is loaded
+            foreach (var config in ConfigurationList)
+            {
+                foreach (var app in config.StartupApplicationList)
+                {
+                    if (app.LoaderName != null && app.LoaderName.Equals(moduleName, StringComparison.OrdinalIgnoreCase))
+                    {
+                        return app.Enabled; // Return whether the module is enabled/load status
+                    }
+                }
+            }
+            
+            // If module is not found in any configuration, it's not loaded
+            return false;
+        }
+
+        public void LoadModule(string moduleName, string configPath)
+        {
+            // Find the first configuration that has this module as a startup application
+            foreach (var config in ConfigurationList)
+            {
+                var app = config.StartupApplicationList.FirstOrDefault(
+                    a => a.LoaderName != null && a.LoaderName.Equals(moduleName, StringComparison.OrdinalIgnoreCase));
+                
+                if (app != null)
+                {
+                    // Enable the application/module
+                    app.Enabled = true;
+                    return;
+                }
+            }
+            
+            // If the module wasn't found in any existing configuration, we might want to add it
+            // This assumes that modules are pre-defined in the configuration
+            // For now, just return since we're assuming the module should already exist in the config
+        }
+
+        public void UnloadModule(string moduleName)
+        {
+            // Find the first configuration that has this module as a startup application
+            foreach (var config in ConfigurationList)
+            {
+                var app = config.StartupApplicationList.FirstOrDefault(
+                    a => a.LoaderName != null && a.LoaderName.Equals(moduleName, StringComparison.OrdinalIgnoreCase));
+                
+                if (app != null)
+                {
+                    // Disable the application/module
+                    app.Enabled = false;
+                    return;
+                }
+            }
+        }
+
         public bool IsSectionExists(string sectionPath)
         {
             // Normalize the section path by removing leading/trailing slashes and brackets

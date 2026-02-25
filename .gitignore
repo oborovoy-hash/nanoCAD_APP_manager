@@ -1,241 +1,55 @@
 ```csharp
 # Build results
-bin/
-obj/
-out/
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
 
-# User-specific files
-*.userprefs
+# Visual Studio files
+*.sln
+*.csproj
+*.user
 *.userosscache
 *.suo
-*.user
-*.aps
-*.ncb
-*.opendb
-*.opensdf
-*.sdf
-*.cachefile
+*.userprefs
+*.cache
 *.VC.db
 *.VC.VC.opendb
 
-# Build results of an ATL project
-dlldata.c
-
-# Benchmark Results
-BenchmarkDotNet.Artifacts/
-
-# OS generated files
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-desktop.ini
-$RECYCLE.BIN/
-
-# Visual Studio Code
+# Visual Studio Code files
 .vscode/
 
-# ReSharper
-_ReSharper*/
-*.[Rr]e[Ss]harper
-*.DotSettings.user
-*.dotCover
- coverage.xml
-
-# Visual Studio Analyzer suppressions
-*.suppressions
-
-# NuGet Packages
-*.nupkg
-!src/**/packages.config
-
-# Windows Phone 8.1 built output
-*.xap
-
-# Code signing
-*.pfx
-*.p12
-
-# Visual Studio cache/options directory (post VS 2019)
-.vs/
-
-# MSTest test Results
-[Tt]est[Rr]esult*/
-[Bb]uild[Ll]og.*
-
-# NUnit
-*.VisualState.xml
-TestResult.xml
-nunit-*.xml
-
-# Build Results of Package Reference Convert
-*.prijproject.backup
-
-# Ionide (cross platform F# editor)
-.project
-.project.user
-
-# FAKE - F# Make
-.fake/
-
-# JetBrains Rider
+# Rider files
 .idea/
 
-# Coverage results
-coverage/
-
-# Temporary folder for MSBuild's temporary files
-TempPE/
-
-# Environment specific settings
-.env
-.env.local
-*.env
-*.local.env
+# Compiled binaries
+*.exe
+*.dll
+*.so
+*.dylib
 
 # Logs
 *.log
 
+# Environment
+.env
+.env.local
+*.env.*
+
 # OS generated files
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
 Thumbs.db
 desktop.ini
 
-# Compiled files
-*.dll
-*.exe
-*.pdb
-*.ilk
-*.iobj
-*.ipdb
-*.exp
-*.lib
-*.so
-*.dylib
-*.class
-
-# Temporary files
-*.tmp
-*.temp
-*.cache
-
-# MyPy cache
-.mypy_cache/
-.pyre/
-.pytype/
-
-# Python virtual environments
-venv/
-.venv/
-env/
-ENV/
-
-# Python cache
-__pycache__/
-*.py[cod]
-*$py.class
-
-# Node.js
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Java
-target/
-.gradle/
-*.class
-*.jar
-*.war
-*.ear
-hs_err_pid*
-
-# Ruby
-*.gem
-*.rbc
-.ruby-version
-.bundle/
-vendor/bundle/
-Gemfile.lock
-
-# Go
-*.exe
-*.test
-*.prof
-coverage.out
-
-# C#
-[Nn]u[Pp]ackages/
+# NuGet Packages
 *.nupkg
-*.snupkg
-*.snk
-*.pfx
-*.p12
-coverage.*
-*.gcda
-*.gcno
-*.gcov
-*.lcov
-*.lst
+packages/
 
-# C++
-*.o
-*.obj
-*.so
-*.a
-*.lib
-*.dll
-*.exe
-*.out
-*.dSYM/
-*.pdb
-*.ilk
-*.exp
-*.iobj
-*.ipdb
-*.gcda
-*.gcno
-*.gcov
-*.lcov
-*.lst
-
-# Compressed files
-*.zip
-*.tar.gz
-*.tar.bz2
-*.tar.xz
-*.tar.zst
-*.gz
-*.bz2
-*.xz
-*.7z
-*.rar
-*.Z
-*.lz
-*.lzo
-*.lz4
-*.lzh
-*.cab
-*.arj
-*.rpm
-*.deb
-*.zst
-
-# Configuration files that might contain secrets
-appsettings.Production.json
-appsettings.Staging.json
-appsettings.Development.json
-
-# Local configuration overrides
-*.local.settings.json
-local.properties
-gradle.properties
+# Test results
+*.trx
 ```

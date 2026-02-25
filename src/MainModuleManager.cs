@@ -47,7 +47,8 @@ namespace NanoCADModuleManager
                 throw new FileNotFoundException($"Settings file not found: {_settingsPath}");
             }
 
-            var settings = GetIniParser().LoadFromFile(_settingsPath);
+            GetIniParser().LoadFromFile(_settingsPath);
+            var settings = GetIniParser().Data;
             if (!settings.ContainsKey("Paths") || !settings["Paths"].ContainsKey("BasePath"))
             {
                 throw new InvalidOperationException("BasePath not defined in settings.ini");
@@ -82,8 +83,9 @@ namespace NanoCADModuleManager
 
             foreach (string cfgPath in cfgFiles)
             {
-                var iniData = new IniFileParser(cfgPath).LoadFromFile(cfgPath);
-                if (iniData.ContainsKey("StartUp") && iniData["StartUp"].ContainsKey("ModuleName"))
+            var iniData = new IniFileParser(cfgPath).LoadFromFile(cfgPath);
+            var iniDataDict = new IniFileParser(cfgPath).Data;
+            if (iniDataDict.ContainsKey("StartUp") && iniDataDict["StartUp"].ContainsKey("ModuleName"))
                 {
                     string moduleName = iniData["StartUp"]["ModuleName"];
                     string description = iniData["StartUp"].ContainsKey("Description") 
