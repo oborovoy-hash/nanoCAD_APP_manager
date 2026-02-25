@@ -1,22 +1,21 @@
 ﻿using System;
-using System.Windows.Forms;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
 
 namespace NanoCADModuleManager
 {
-    public class Program
+    /// <summary>
+    /// Interaction logic for App.xaml
+    /// </summary>
+    public partial class App : Application
     {
-        [STAThread]
-        public static void Main()
-        {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            
-            var form = new ModuleManagerForm();
-            var mainModuleManager = new MainModuleManager(form);
-            mainModuleManager.Initialize();
-
-            Application.Run(form);
-        }
     }
 }
 
