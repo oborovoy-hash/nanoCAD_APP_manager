@@ -13,6 +13,14 @@ namespace src
 {
     public partial class Form1 : Form
     {
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.ListBox listBoxVersions;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGridViewModules;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnModuleName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnConfigs;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDescription;
+
         public Form1()
         {
             InitializeComponent();
