@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Win32;
+using System.IO;
 
 namespace src
 {
@@ -21,9 +22,11 @@ namespace src
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnConfigs;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDescription;
 
+
         public Form1()
         {
             InitializeComponent();
+            InitializeCustomComponents();
         }
 
         // Функция для получения списка установленных версий nanoCAD
@@ -54,6 +57,107 @@ namespace src
             }
             
             return versions;
+        }
+
+        // Метод для инициализации пользовательских компонентов
+        private void InitializeCustomComponents()
+        {
+            // Загружаем иконку из реестра
+            LoadIconFromRegistry();
+
+            // Устанавливаем текст с информацией о версии nanoCAD
+            SetAppNameText();
+        }
+
+        // Метод для загрузки иконки из реестра
+        private void LoadIconFromRegistry()
+        {
+            try
+            {
+                using (RegistryKey key = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Nanosoft\nanoCAD x64"))
+                {
+                    if (key != null)
+                    {
+                        string[] subKeys = key.GetSubKeyNames();
+                        if (subKeys.Length > 0)
+                        {
+                            // Берем последнюю (самую новую) версию
+                            string latestVersion = subKeys.Max();
+                            
+                            // Открываем подключ для получения информации о конкретной версии
+                            using (RegistryKey versionKey = key.OpenSubKey(latestVersion))
+                            {
+                                if (versionKey != null)
+                                {
+                                    // Пытаемся получить путь к исполняемому файлу
+                                    string installLocation = versionKey.GetValue("InstallLocation") as string;
+                                    
+                                    if (!string.IsNullOrEmpty(installLocation))
+                                    {
+                                        // Путь к исполняемому файлу nanoCAD
+                                        string exePath = Path.Combine(installLocation, "nCad.exe");
+                                        
+                                        if (File.Exists(exePath))
+                                        {
+                                            // Извлекаем иконку из исполняемого файла
+                                            Icon extractedIcon = Icon.ExtractAssociatedIcon(exePath);
+                                            if (extractedIcon != null)
+                                            {
+                                                appIconPictureBox.Image = extractedIcon.ToBitmap();
+                                                return;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                // Если иконка не найдена, используем стандартную
+                appIconPictureBox.Image = SystemIcons.Application.ToBitmap();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при загрузке иконки: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                appIconPictureBox.Image = SystemIcons.Application.ToBitmap();
+            }
+        }
+
+        // Метод для установки текста с информацией о приложении
+        private void SetAppNameText()
+        {
+            try
+            {
+                using (RegistryKey key = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Nanosoft\nanoCAD x64"))
+                {
+                    if (key != null)
+                    {
+                        string[] subKeys = key.GetSubKeyNames();
+                        if (subKeys.Length > 0)
+                        {
+                            // Берем последнюю (самую новую) версию
+                            string latestVersion = subKeys.Max();
+                            appNameLabel.Text = $"nanoCAD {latestVersion} x64";
+                        }
+                        else
+                        {
+                            // Если версии не найдены, отображаем базовое название
+                            appNameLabel.Text = "nanoCAD x64";
+                        }
+                    }
+                    else
+                    {
+                        // Если ключ реестра не найден, отображаем базовое название
+                        appNameLabel.Text = "nanoCAD x64";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при определении версии: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                appNameLabel.Text = "nanoCAD x64";
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
