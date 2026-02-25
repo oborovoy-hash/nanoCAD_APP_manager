@@ -1,9 +1,0 @@
-d:\!Programs\TestProjectWithForms\TestProjectWithForms\bin\Debug\TestProjectWithForms.exe.config
-d:\!Programs\TestProjectWithForms\TestProjectWithForms\bin\Debug\TestProjectWithForms.exe
-d:\!Programs\TestProjectWithForms\TestProjectWithForms\bin\Debug\TestProjectWithForms.pdb
-d:\!Programs\TestProjectWithForms\TestProjectWithForms\obj\Debug\TestProjectWithForms.csproj.AssemblyReference.cache
-d:\!Programs\TestProjectWithForms\TestProjectWithForms\obj\Debug\TestProjectWithForms.Properties.Resources.resources
-d:\!Programs\TestProjectWithForms\TestProjectWithForms\obj\Debug\TestProjectWithForms.csproj.GenerateResource.cache
-d:\!Programs\TestProjectWithForms\TestProjectWithForms\obj\Debug\TestProjectWithForms.csproj.CoreCompileInputs.cache
-d:\!Programs\TestProjectWithForms\TestProjectWithForms\obj\Debug\TestProjectWithForms.exe
-d:\!Programs\TestProjectWithForms\TestProjectWithForms\obj\Debug\TestProjectWithForms.pdb
