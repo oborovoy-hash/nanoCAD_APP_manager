@@ -56,7 +56,11 @@
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(0, 0);
             this.mainPanel.Name = "mainPanel";
+<<<<<<< HEAD
             this.mainPanel.Size = new System.Drawing.Size(2068, 1005);
+=======
+            this.mainPanel.Size = new System.Drawing.Size(1292, 710);
+>>>>>>> c1da1edbeaa91dd4d8ac1a4c63154fcc974518d2
             this.mainPanel.TabIndex = 1;
             // 
             // splitContainer1
@@ -73,8 +77,13 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dataGridViewModules);
+<<<<<<< HEAD
             this.splitContainer1.Size = new System.Drawing.Size(2068, 955);
             this.splitContainer1.SplitterDistance = 480;
+=======
+            this.splitContainer1.Size = new System.Drawing.Size(1292, 660);
+            this.splitContainer1.SplitterDistance = 300;
+>>>>>>> c1da1edbeaa91dd4d8ac1a4c63154fcc974518d2
             this.splitContainer1.TabIndex = 0;
             // 
             // listBoxVersions
@@ -87,7 +96,11 @@
             "Nanocad 24.1"});
             this.listBoxVersions.Location = new System.Drawing.Point(0, 30);
             this.listBoxVersions.Name = "listBoxVersions";
+<<<<<<< HEAD
             this.listBoxVersions.Size = new System.Drawing.Size(480, 925);
+=======
+            this.listBoxVersions.Size = new System.Drawing.Size(300, 630);
+>>>>>>> c1da1edbeaa91dd4d8ac1a4c63154fcc974518d2
             this.listBoxVersions.TabIndex = 1;
             this.listBoxVersions.SelectedIndexChanged += new System.EventHandler(this.listBoxVersions_SelectedIndexChanged);
             // 
@@ -116,7 +129,11 @@
             this.dataGridViewModules.RowHeadersVisible = false;
             this.dataGridViewModules.RowHeadersWidth = 62;
             this.dataGridViewModules.RowTemplate.Height = 30;
+<<<<<<< HEAD
             this.dataGridViewModules.Size = new System.Drawing.Size(1584, 955);
+=======
+            this.dataGridViewModules.Size = new System.Drawing.Size(988, 660);
+>>>>>>> c1da1edbeaa91dd4d8ac1a4c63154fcc974518d2
             this.dataGridViewModules.TabIndex = 0;
             // 
             // ColumnModuleName
@@ -148,7 +165,11 @@
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
             this.topPanel.Name = "topPanel";
+<<<<<<< HEAD
             this.topPanel.Size = new System.Drawing.Size(2068, 50);
+=======
+            this.topPanel.Size = new System.Drawing.Size(1292, 50);
+>>>>>>> c1da1edbeaa91dd4d8ac1a4c63154fcc974518d2
             this.topPanel.TabIndex = 1;
             // 
             // appNameLabel
@@ -157,7 +178,11 @@
             this.appNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.appNameLabel.Location = new System.Drawing.Point(55, 15);
             this.appNameLabel.Name = "appNameLabel";
+<<<<<<< HEAD
             this.appNameLabel.Size = new System.Drawing.Size(228, 37);
+=======
+            this.appNameLabel.Size = new System.Drawing.Size(150, 25);
+>>>>>>> c1da1edbeaa91dd4d8ac1a4c63154fcc974518d2
             this.appNameLabel.TabIndex = 1;
             this.appNameLabel.Text = "nanoCAD x64";
             // 
@@ -174,7 +199,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(2068, 1005);
+=======
+            this.ClientSize = new System.Drawing.Size(1292, 710);
+>>>>>>> c1da1edbeaa91dd4d8ac1a4c63154fcc974518d2
             this.Controls.Add(this.mainPanel);
             this.Name = "Form1";
             this.Text = "Менеджер модулей nanoCAD";
