@@ -10,10 +10,7 @@
     <RootNamespace>NanoCADModuleManager</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Page Remove="App.xaml" />
-    <Page Remove="MainWindow.xaml" />
-  </ItemGroup>
+  
 
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
