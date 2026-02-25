@@ -21,10 +21,7 @@ namespace src
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnModuleName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnConfigs;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDescription;
-        private System.Windows.Forms.Panel mainPanel;
-        private System.Windows.Forms.Panel topPanel;
-        private System.Windows.Forms.Label appNameLabel;
-        private System.Windows.Forms.PictureBox appIconPictureBox;
+
 
         public Form1()
         {
