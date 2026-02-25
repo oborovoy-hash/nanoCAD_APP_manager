@@ -1,7 +1,22 @@
 ```
-# Package files
-*.deb
+# Binaries
+*.exe
+*.pdb
+*.dll
+*.so
+*.dylib
 
-# Build artifacts
-src/obj/
+# Build results
+bin/
+obj/
+
+# Dependencies
+packages/
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
 ```
