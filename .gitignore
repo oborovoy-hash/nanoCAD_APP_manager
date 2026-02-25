@@ -1,11 +1,1 @@
-```
-# Build artifacts
-*.ini
-!src/settings.ini
-
-# Debug and build directories
-**/Debug/
-**/Release/
-obj/
-bin/
-```
+Nothing should be ignored based on the provided changes. The only modified file is a source code file (.cs), which should not be added to .gitignore.
