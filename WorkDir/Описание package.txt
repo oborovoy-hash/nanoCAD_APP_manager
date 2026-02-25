@@ -1,0 +1,133 @@
+Файл (.package) пакетной загрузки приложения
+Послать отзыв
+
+Файл (.package) пакетной загрузки приложения
+Файл .package содержит всю необходимую информацию о пользовательских конфигурациях nanoCAD, включая приложения для загрузки и пользовательские меню. Он позволяет загружать выбранную конфигурацию непосредственно при старте nanoCAD. 
+
+ 
+
+Пример XML-структуры файла .package для загрузки NRX-модулей: 
+
+C:\Program Files (x86)\Nanosoft\Примеры nanoCAD SDK 21.0\NCAD210x64\NCAD210x64.package 
+
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ApplicationPackage
+  xmlns="hostApplicationPackage/v01"
+  Name="nanoCAD SDK Samples"
+>
+  <Components>
+    <ConfigEntry
+      FileName="NCADSDK.cfg"
+      FileType="CFG"
+    />
+    <ComponentEntry
+      AppName="HelloNRX minimal NRX sample"
+      ModuleName="HelloNRX.nrx"
+      ModuleType="NRX"
+    />
+    <ComponentEntry
+      AppName="CrossCircle Object Enabler"
+      ModuleName="CrossCircle.nrx"
+      ModuleType="NRX"
+    />
+    <ComponentEntry
+      AppName="CrossCircle Commands"
+      ModuleName="CrossCircleUI.nrx"
+      ModuleType="NRX"
+    />
+    <ComponentEntry
+      AppName="CrossCircle Managed Wrapper"
+      ModuleName="CrossCircleMg.dll"
+      ModuleType="NRX"
+    />
+    <ComponentEntry
+      AppName="CrossCircle Managed Commands"
+      ModuleName="CrossCircleMgdList.dll"
+      ModuleType="MGD"
+    />
+    <ComponentEntry
+      AppName="HelloHost .NET Sample"
+      ModuleName="HelloHost.dll"
+      ModuleType="MGD"
+    />
+    <ComponentEntry
+      AppName="HelloHost VB.NET Sample"
+      ModuleName="HelloHostVB.dll"
+      ModuleType="MGD"
+    />
+    <ComponentEntry
+      AppName="MultiCAD Objects"
+      ModuleName="McsObjects.dll"
+      ModuleType="MultiCAD"
+    />
+    <ComponentEntry
+      AppName="MultiCAD Symbols"
+      ModuleName="Symbols.dll"
+      ModuleType="MultiCAD"
+    />
+    <ComponentEntry
+      AppName="MultiCAD .NET Symbols"
+      ModuleName="SymbolsMgd.dll"
+      ModuleType="MGD"
+    />
+    <ComponentEntry
+      AppName="MultiCAD .NET CustomObjects"
+      ModuleName="CustomObjects.dll"
+      ModuleType="MGD"
+    />
+    <ComponentEntry
+      AppName="NSF Commands"
+      ModuleName="hello_nsf.nsf"
+      ModuleType="NSF"
+    />
+    <ComponentEntry
+      AppName="Tiles LISP Sample"
+      ModuleName="Tiles.lsp"
+      ModuleType="LISP"
+    />
+    <ComponentEntry
+      AppName="Hello World DCL Sample"
+      ModuleName="helloworld.lsp"
+      ModuleType="LISP"
+    />
+    <ComponentEntry
+      AppName="ListDialog DCL Sample"
+      ModuleName="listdialog.lsp"
+      ModuleType="LISP"
+    />
+    <ComponentEntry
+      AppName="MessageBox DCL Sample"
+      ModuleName="messagebox.lsp"
+      ModuleType="LISP"
+    />
+    <ComponentEntry
+      AppName="SinDialog DCL Sample"
+      ModuleName="sindialog.lsp"
+      ModuleType="LISP"
+    />
+  </Components>
+</ApplicationPackage> 
+
+Элементы, которые используются для описания пакета:
+
+•ApplicationPackage
+•Components
+•ConfigEntry
+•ComponentEntry
+ 
+
+Главный элемент ApplicationPackage содержит атрибут Name для задания имени приложения, которое по окончании загрузки будет отображаться в командной строке. 
+
+ 
+
+Элемент Components описывает компоненты пакета: загружаемый модуль приложения – элемент ComponentEntry, а также конфигурационный файл приложения с меню – ConfigEntry. 
+
+ 
+
+ComponentEntry содержит атрибуты: 
+
+•AppName — имя приложения,
+•ModuleName – имя исполняемого модуля,
+•ModuleType – тип модуля. 
+◦Допускается использование следующих типов: LISP, NRX, MGD, NSF, TX, они же перечислены в списке поддерживаемых типов команды APPLOAD.

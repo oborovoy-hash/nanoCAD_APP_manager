@@ -1,0 +1,26 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "CrossCircleMgdList/1.0.0": {
+        "dependencies": {
+          "CrossCircleMg": "1.0.0"
+        },
+        "runtime": {
+          "CrossCircleMgdList.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CrossCircleMgdList/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
