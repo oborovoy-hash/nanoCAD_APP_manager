@@ -1,41 +1,43 @@
 ```
-# Build artifacts
+# Build artifacts and binaries
 *.obj
 *.exe
 *.dll
-*.so
-*.a
-*.lib
 *.pdb
-*.ilk
-*.exp
-*.iobj
-*.ipdb
-*.tlog
-*.lastbuildstate
+*.userprefs
+*.cache
+*.compiled
+*.log
 
 # Dependencies
 packages/
 bin/
 obj/
-Debug/
-Release/
-x64/
-x86/
 
-# Logs
-*.log
+# Configuration files that might contain local settings
+*.user
 
-# Environment
-.env
-.env.local
-*.env.*
+# Temp files
+*.tmp
+*~
+.DS_Store
+Thumbs.db
 
-# Editors
+# Environment specific
 .vs/
 .vshost.exe
-.user
 .userosscache
-.usersettings
-.vsconfig
+.dependencymap.xml
+
+# IDE specific
+.vscode/
+.idea/
+*.suo
+*.userprefs
+
+# Output directories
+Debug/
+Release/
+Build/
+Output/
 ```
