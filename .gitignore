@@ -1,39 +1,41 @@
-```gitignore
+```
 # Build artifacts
 *.obj
 *.exe
 *.dll
+*.so
+*.a
+*.lib
 *.pdb
-*.userprefs
-*.cache
-*.log
+*.ilk
+*.exp
+*.iobj
+*.ipdb
+*.tlog
+*.lastbuildstate
 
 # Dependencies
 packages/
-node_modules/
-
-# OS generated files
-.DS_Store
-Thumbs.db
-
-# Visual Studio/Visual Studio Code
-.vs/
-.vscode/
-*.user
-*.suo
-*.userosscache
-*.sln.docstates
-
-# Temporary files
-*.tmp
-*.temp
-*.bak
-
-# Configuration specific to NanoCAD Module Manager
 bin/
 obj/
 Debug/
 Release/
-*.userprefs
-*.useroscache
+x64/
+x86/
+
+# Logs
+*.log
+
+# Environment
+.env
+.env.local
+*.env.*
+
+# Editors
+.vs/
+.vshost.exe
+.user
+.userosscache
+.usersettings
+.vsconfig
 ```
