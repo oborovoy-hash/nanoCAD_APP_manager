@@ -16,9 +16,25 @@ namespace NanoCADModuleManager
     /// </summary>
     public partial class MainWindow : Window
     {
+        private ModuleRepository _moduleRepository;
+
         public MainWindow()
         {
             InitializeComponent();
+            InitializeApplication();
+        }
+
+        private void InitializeApplication()
+        {
+            try
+            {
+                _moduleRepository = new ModuleRepository();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error initializing application: {ex.Message}", "Initialization Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                Application.Current.Shutdown();
+            }
         }
     }
 }
