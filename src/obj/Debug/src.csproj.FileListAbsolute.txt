@@ -9,3 +9,4 @@ D:\!Programs\nanoCAD_APP_manager\src\obj\Debug\src.csproj.CoreCompileInputs.cach
 D:\!Programs\nanoCAD_APP_manager\src\obj\Debug\src.exe
 D:\!Programs\nanoCAD_APP_manager\src\obj\Debug\src.pdb
 D:\!Programs\nanoCAD_APP_manager\src\obj\Debug\src.exe.config
+D:\!Programs\nanoCAD_APP_manager\src\obj\Debug\src.Form2.resources
