@@ -74,6 +74,13 @@ namespace NanoCADModuleManager
             }
         }
 
+        // Method to load INI file and return the dictionary (for compatibility with older code)
+        public Dictionary<string, Dictionary<string, string>> LoadIniFile(string filePath)
+        {
+            LoadFromFile(filePath);
+            return Sections;
+        }
+
         public List<string> GetConfigurationNames()
         {
             var configNames = new List<string>();

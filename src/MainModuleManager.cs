@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 namespace NanoCADModuleManager
 {
@@ -10,8 +11,8 @@ namespace NanoCADModuleManager
     {
         private readonly string _settingsPath = "settings.ini";
         private readonly Dictionary<string, List<ModuleManagerForm.ModuleModel>> _modulesByVersion = new Dictionary<string, List<ModuleManagerForm.ModuleModel>>();
-        private readonly IniFileParser _iniParser = new IniFileParser();
-        private readonly ConfigurationMapper _configMapper = new ConfigurationMapper();
+        private readonly string _iniParserFilePath = "settings.ini";
+        private readonly string _configMapperFilePath = "settings.ini";
         private ModuleManagerForm _form;
 
         public MainModuleManager(ModuleManagerForm form)
@@ -20,6 +21,17 @@ namespace NanoCADModuleManager
             _form.OnVersionSelected += HandleVersionSelected;
             _form.OnModuleToggled += HandleModuleToggled;
             LoadSettings();
+        }
+
+        private IniFileParser GetIniParser()
+        {
+            return new IniFileParser(_iniParserFilePath);
+        }
+
+        private List<string> GetCompatibleConfigs(string cfgPath)
+        {
+            var parser = new IniFileParser(cfgPath);
+            return parser.GetConfigurationNames();
         }
 
         public void Initialize()
@@ -35,7 +47,7 @@ namespace NanoCADModuleManager
                 throw new FileNotFoundException($"Settings file not found: {_settingsPath}");
             }
 
-            var settings = _iniParser.LoadIniFile(_settingsPath);
+            var settings = GetIniParser().LoadFromFile(_settingsPath);
             if (!settings.ContainsKey("Paths") || !settings["Paths"].ContainsKey("BasePath"))
             {
                 throw new InvalidOperationException("BasePath not defined in settings.ini");
@@ -70,7 +82,7 @@ namespace NanoCADModuleManager
 
             foreach (string cfgPath in cfgFiles)
             {
-                var iniData = _iniParser.LoadIniFile(cfgPath);
+                var iniData = new IniFileParser(cfgPath).LoadFromFile(cfgPath);
                 if (iniData.ContainsKey("StartUp") && iniData["StartUp"].ContainsKey("ModuleName"))
                 {
                     string moduleName = iniData["StartUp"]["ModuleName"];
@@ -84,11 +96,11 @@ namespace NanoCADModuleManager
                     string ncmFilePath = FindNcmFile(Path.GetDirectoryName(cfgPath), ncmFileName);
                     if (!string.IsNullOrEmpty(ncmFilePath))
                     {
-                        NCadConfig ncadConfig = new NCadConfig(ncmFilePath);
+                        KpblcNCadCfgIni.NCadConfig ncadConfig = new KpblcNCadCfgIni.NCadConfig(ncmFilePath);
                         isLoaded = ncadConfig.IsModuleLoaded(moduleName);
                     }
 
-                    var compatibleConfigs = _configMapper.GetCompatibleConfigs(cfgPath);
+                    var compatibleConfigs = GetCompatibleConfigs(cfgPath);
 
                     modules.Add(new ModuleManagerForm.ModuleModel
                     {
@@ -146,7 +158,8 @@ namespace NanoCADModuleManager
 
                     if (!string.IsNullOrEmpty(ncmFilePath))
                     {
-                        NCadConfig ncadConfig = new NCadConfig(ncmFilePath);
+                        KpblcNCadCfgIni.NCadConfig ncadConfig = new KpblcNCadCfgIni.NCadConfig(ncmFilePath);
+
                         if (loadStatus)
                         {
                             ncadConfig.LoadModule(moduleName, module.Name + ".cfg"); // Using module name as config path placeholder
