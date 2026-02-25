@@ -1,0 +1,10 @@
+D:\!Programs\nanoCAD_APP_manager\src\bin\Debug\src.exe.config
+D:\!Programs\nanoCAD_APP_manager\src\bin\Debug\src.exe
+D:\!Programs\nanoCAD_APP_manager\src\bin\Debug\src.pdb
+D:\!Programs\nanoCAD_APP_manager\src\obj\Debug\src.csproj.AssemblyReference.cache
+D:\!Programs\nanoCAD_APP_manager\src\obj\Debug\src.Form1.resources
+D:\!Programs\nanoCAD_APP_manager\src\obj\Debug\src.Properties.Resources.resources
+D:\!Programs\nanoCAD_APP_manager\src\obj\Debug\src.csproj.GenerateResource.cache
+D:\!Programs\nanoCAD_APP_manager\src\obj\Debug\src.csproj.CoreCompileInputs.cache
+D:\!Programs\nanoCAD_APP_manager\src\obj\Debug\src.exe
+D:\!Programs\nanoCAD_APP_manager\src\obj\Debug\src.pdb
