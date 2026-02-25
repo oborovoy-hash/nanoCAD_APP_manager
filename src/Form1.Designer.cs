@@ -29,8 +29,10 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBoxIcon = new System.Windows.Forms.PictureBox();
+            this.labelAppName = new System.Windows.Forms.Label();
             this.listBoxVersions = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewModules = new System.Windows.Forms.DataGridView();
             this.ColumnModuleName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnConfigs = new System.Windows.Forms.DataGridViewTextBoxColumn();

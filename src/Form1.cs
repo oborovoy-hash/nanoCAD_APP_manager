@@ -14,8 +14,10 @@ namespace src
     public partial class Form1 : Form
     {
         private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.PictureBox pictureBoxIcon;
+        private System.Windows.Forms.Label labelAppName;
         private System.Windows.Forms.ListBox listBoxVersions;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridViewModules;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnModuleName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnConfigs;
@@ -24,6 +26,25 @@ namespace src
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void UpdateAppInfoDisplay(string version)
+        {
+            // Set the application name with version
+            labelAppName.Text = $"nanoCAD {version} x64";
+            
+            // Try to load an icon - in a real implementation you might want to load different icons for different versions
+            try
+            {
+                // Look for an icon file in resources or use a default system icon
+                pictureBoxIcon.Image = SystemIcons.Application.ToBitmap();
+                pictureBoxIcon.SizeMode = PictureBoxSizeMode.Zoom;
+            }
+            catch
+            {
+                // If we can't load an icon, ensure the picture box is still visible but empty
+                pictureBoxIcon.Image = null;
+            }
         }
 
         // Функция для получения списка установленных версий nanoCAD
@@ -82,6 +103,7 @@ namespace src
             string selectedVersion = listBoxVersions.SelectedItem?.ToString();
             if (!string.IsNullOrEmpty(selectedVersion))
             {
+                UpdateAppInfoDisplay(selectedVersion);
                 LoadModulesForVersion(selectedVersion);
             }
         }
